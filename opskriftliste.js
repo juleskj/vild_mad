@@ -12,4 +12,6 @@ fetch("https://hkacgwvfknbydsffczoz.supabase.co/rest/v1/vild_mad_opskrifter", {
   .then(showData);
 function showData(opskrifter) {
   console.log(opskrifter);
+
+  // document.querySelector(".opskrift_overskrift").textContent = opskrifter.name;
 }
