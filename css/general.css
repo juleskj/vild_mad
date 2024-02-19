@@ -9,31 +9,6 @@
   box-sizing: border-box;
 }
 
-#menu_toggle {
-  display: none;
-}
-
-.hamburger-menu label,
-.hamburger-menu input {
-  position: absolute;
-  display: none;
-  z-index: 1;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  /* width: 15%; */
-  height: 15%;
-}
-
-.aktiv {
-  color: var(--brown);
-}
-
 /******************** menu ********************/
 
 @media (max-width: 800px) {
@@ -73,7 +48,7 @@ ul {
     position: fixed;
     top: 0;
     left: -100%;
-    /* width: 300px; */
+    width: 300px;
     height: 100%;
     margin: 0;
     padding: 80px 0;
@@ -89,31 +64,53 @@ ul {
   }
 }
 
+#menu_toggle {
+  display: none;
+}
+
+.hamburger-menu label,
+.hamburger-menu input {
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 header {
   position: sticky;
   top: 0;
   z-index: 2;
-  padding: 20px 0;
+  padding: 5px 0;
   margin-bottom: 30px;
   background-color: var(--brown);
   border: blue 1px solid;
+}
+
+header a {
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0 10px;
+  color: white;
 }
 
 li {
   list-style-type: none;
 }
 
-header a {
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  color: white;
-}
-
 li :hover {
   color: yellow;
   border-bottom: solid 1.5px yellow;
   background-color: var(--orange);
+  border-radius: 2px;
+}
+
+.logo img {
+  max-width: 80px;
 }
 
 .logo :hover {
@@ -122,9 +119,5 @@ li :hover {
 }
 
 .aktiv {
-  color: var(--brown);
-}
-
-.logo {
-  border: solid 1px red;
+  border-bottom: solid yellow 2px;
 }
