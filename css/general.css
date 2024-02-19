@@ -25,6 +25,27 @@ h3 {
   color: rgb(240, 240, 240);
 }
 
+h1 {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p,
+a {
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 /******************** menu ********************/
 
 @media (max-width: 800px) {
