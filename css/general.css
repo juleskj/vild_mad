@@ -1,12 +1,28 @@
 :root {
   --brown: #936e5b;
   --orange: #f27454;
+  --light_brown: #cbb89d;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light_brown);
+}
+
+footer {
+  background-color: var(--brown);
+}
+
+p,
+h1,
+h2,
+h3 {
+  color: rgb(240, 240, 240);
 }
 
 /******************** menu ********************/
@@ -88,7 +104,6 @@ header {
   padding: 5px 0;
   margin-bottom: 30px;
   background-color: var(--brown);
-  border: blue 1px solid;
 }
 
 header a {
