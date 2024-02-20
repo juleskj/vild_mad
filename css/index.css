@@ -35,6 +35,9 @@ header {
 .title {
   font-size: 60px;
   line-height: 90px;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .description {
@@ -43,7 +46,7 @@ header {
 }
 
 .recipes {
-  background-color: #00a84e;
+  background-color: #929776;
   color: #fff;
   padding: 1rem 2rem;
   border: none;
@@ -51,6 +54,8 @@ header {
   font-size: 1rem;
   cursor: pointer;
   text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 38px;
 }
 
 /* new recipies animation */
@@ -63,14 +68,16 @@ header {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 32px;
   text-transform: uppercase;
   -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #fff;
   white-space: nowrap;
-  padding: 0 3rem;
-  letter-spacing: 1px;
+  padding: 0 5rem;
+  letter-spacing: 6px;
   animation: move-rtl 4000ms linear infinite;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @keyframes move-rtl {
@@ -81,3 +88,34 @@ h2 {
     transform: translateX(-100%);
   }
 }
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 8%;
+  text-align: center;
+}
+
+.grid-item {
+  position: relative;
+  background-color: #929776;
+  border-radius: 6%;
+  margin: 70px;
+}
+
+.image1 {
+  width: 67%;
+  height: 257px;
+}
+
+.image2 {
+  width: 80%;
+
+  height: 300px;
+}
+
+.image3 {
+  width: 60%;
+  height: 237px;
+} */
