@@ -1,17 +1,64 @@
-//https://hkacgwvfknbydsffczoz.supabase.co
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrYWNnd3Zma25ieWRzZmZjem96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4Mjc3MzMsImV4cCI6MjAyMzQwMzczM30.jv7QvuNAplwpeSdsg2PFEwkguugb0vnWAl7AASiXX4E
+window.addEventListener("DOMContentLoaded", init);
 
-fetch("https://hkacgwvfknbydsffczoz.supabase.co/rest/v1/vild_mad_opskrifter", {
-  method: "GET",
-  headers: {
-    apikey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrYWNnd3Zma25ieWRzZmZjem96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4Mjc3MzMsImV4cCI6MjAyMzQwMzczM30.jv7QvuNAplwpeSdsg2PFEwkguugb0vnWAl7AASiXX4E",
-  },
-})
-  .then((res) => res.json())
-  .then(showData);
-function showData(opskrifter) {
-  console.log(opskrifter);
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("season");
 
-  // document.querySelector(".opskrift_overskrift").textContent = opskrifter.name;
+function init() {
+  opskriftTemplate = document.querySelector(".opskrift_template");
+
+  opskriftContainer = document.querySelector(".opskrift_container");
+
+  /*********************************** henter data fra supabase og laver data om til json **************************************/
+  fetch(
+    "https://hkacgwvfknbydsffczoz.supabase.co/rest/v1/vild_mad_opskrifter",
+    {
+      method: "GET",
+      headers: {
+        // her sætte vi nøglen bag på linket så vi kan se daten
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrYWNnd3Zma25ieWRzZmZjem96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4Mjc3MzMsImV4cCI6MjAyMzQwMzczM30.jv7QvuNAplwpeSdsg2PFEwkguugb0vnWAl7AASiXX4E",
+      },
+    }
+  )
+    .then((res) => res.json())
+    .then(showOpskrifter);
+}
+
+function showOpskrifter(opskriftJSON) {
+  let opskriftClone;
+
+  console.log(opskriftJSON);
+
+  // her definere vi de forskkelige ting som vi vil tage fra vores json, og gør det "FOR EACH" for alle arrays
+
+  opskriftJSON.forEach((opskrift) => {
+    opskriftClone = opskriftTemplate.cloneNode(true).content;
+
+    opskriftClone.querySelector(".opskrift_overskrift").textContent =
+      opskrift.name;
+
+    opskriftClone.querySelector(".cookingtime").textContent =
+      opskrift.cookingtime;
+
+    opskriftClone.querySelector(".portion").textContent = opskrift.portionsize;
+
+    opskriftClone.querySelector(".difficulty").textContent =
+      opskrift.difficulty;
+
+    // her tjekker jeg i daten og det ekelte opskrift om "herbs" er falske, for hvis den er skal den fjenre urte iconet
+    if (opskrift.herbs == false) {
+      opskriftClone.querySelector(".herbs").classList.add("none");
+    }
+    // det samme sker her bare med boolean "mushroom"
+    if (opskrift.mushroom == false) {
+      opskriftClone.querySelector(".mushroom").classList.add("none");
+    }
+
+    /*********************************** produkt single view **************************************/
+    //her bliver ancho sendt videre med et id til singleviewet
+    opskriftClone.querySelector("a").href = `singleview.html?id=${opskrift.id}`;
+
+    /*********************************** cloner **************************************/
+    opskriftContainer.appendChild(opskriftClone);
+  });
 }

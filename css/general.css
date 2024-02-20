@@ -114,6 +114,15 @@ a {
   z-index: 1;
 }
 
+.menu_knap span {
+  background-image: url(favicon.svg);
+}
+
+.menu_knap span:hover {
+  scale: 1.2;
+  transition-duration: 2s;
+}
+
 ul {
   display: flex;
   align-items: center;
