@@ -8,7 +8,7 @@ img {
   height: 100%;
 }
 
-.opskrift_container {
+article {
   background-color: var(--brown);
   margin: 10px;
   border-radius: 4px;
@@ -70,7 +70,7 @@ img {
 }
 
 @media (min-width: 800px) {
-  #opskrift_liste {
+  .opskrift_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 10px;
@@ -87,4 +87,8 @@ img {
   .info_list p {
     padding: 0 5px;
   }
+}
+
+.none {
+  display: none;
 }
