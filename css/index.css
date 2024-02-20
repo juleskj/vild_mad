@@ -22,8 +22,8 @@ header {
 /* .mid-plane, */
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 25%;
+  top: 72%;
+  left: 34%;
   transform: translate(-50%, -50%);
 }
 
@@ -34,10 +34,12 @@ header {
 
 .title {
   font-size: 60px;
+  line-height: 90px;
 }
 
 .description {
   font-size: 24px;
+  font-weight: 400;
 }
 
 .recipes {
