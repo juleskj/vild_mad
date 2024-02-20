@@ -16,6 +16,8 @@ body {
 
 footer {
   background-color: var(--brown);
+  position: absolute;
+  bottom: 0;
 }
 
 p,
@@ -165,4 +167,66 @@ li :hover {
 
 .aktiv {
   border-bottom: solid yellow 2px;
+}
+
+
+/******************** footer ********************/
+
+#footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#formHeading {
+  margin-bottom: 5%;
+}
+
+#footerLogo {
+  width: 50%;
+  height: auto;
+  margin-top: 15%;
+  margin-left: 20%;
+  margin-bottom: 15%;
+
+}
+
+#footerVmLogo {
+  width: 45%;
+  height: auto;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
+.footerIcon {
+  width: 40%;
+  height: auto;
+  margin-top: 25%;
+  padding-left: 5%;
+}
+
+#formContainer {
+  margin-top: 15%;
+  margin-bottom: 15%;
+  margin-right: 15%;
+}
+.formGroup {
+ padding-bottom: 5%;
+}
+
+.footerInput {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  outline: none;
+}
+
+#submit {
+  width: 50%;  
+  margin-left: 25%;
 }

@@ -7,24 +7,65 @@
     <title>Categori</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/categori.css">
-
     <link rel="icon" href="favicon.svg">
 </head>
 
 <body>
-
     <header>
-
-
+            <div class="hamburger_menu">
+                <input id="menu_toggle" type="checkbox">
+                <label class="menu_knap" for="menu_toggle">
+                    <span></span>
+                </label>
+    
+                <ul>
+                    <li><a href="categori.html">Category</a></li>
+                    <li><a href="opskriftliste.html">Recipes</a></li>
+                    <li class="logo"><a href="index.html"><img src="css/logo.svg" alt="logo"></a></li>
+                    <li><a href="singleview.html">Singleview</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
     </header>
 
     <main>
-        <h1>VILD MAD</h1>
+        <h1 id="categoryHeading">Choose the season you want to see</h1>
 
     </main>
 
     <footer>
+        <section id="footerGrid">
+        <div>
+            <div id="formContainer">
+            <h3 id="formHeading">Show us your forage finds!</h3>
+            <form>
+            <div class="formGroup">
+                <input class="footerInput" type="text" placeholder="Your name" name="firstName">
+            </div>
+            <div class="formGroup">
+                <input class="footerInput" type="email" placeholder="Your email" name="email">
+            </div>  
+            <div class="formGroup">
+                <input class="footerInput" type="text" placeholder="Your school" name="firstName">
+            </div>
+            <div class="formGroup">
+                <div>
+                <input id="formImg" type="file" name="yield">
+                </div>  
+            </div>
+            <input class="footerInput" id="submit" type="submit" value="Send in">
+            </div>
+            </form>
+        </div>
+        </div>
+       <div><a href="index.html"><img id="footerLogo" src="css/logo.svg"></a></div>
+       <div><a href="https://vildmad.dk/dk"><img id="footerVmLogo" src="/img/vildmadlogo.webp"></a></div>
+       <div>
+        <a href="https://www.facebook.com/vildmaddk"><img class="footerIcon" src="img/fbLogo.png"></a>
+        <a href="https://www.instagram.com/vildmaddk/"><img  class="footerIcon" src="/img/igLogo.png"></a>
+       </div>
 
+     </section>
 
     </footer>
 
