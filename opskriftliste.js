@@ -56,7 +56,7 @@ function showOpskrifter(opskriftJSON) {
 
     /*********************************** produkt single view **************************************/
     //her bliver ancho sendt videre med et id til singleviewet
-    opskriftClone.querySelector("a").href = `opskrift.html?id=${opskrift.id}`;
+    opskriftClone.querySelector("a").href = `singleview.html?id=${opskrift.id}`;
 
     /*********************************** cloner **************************************/
     opskriftContainer.appendChild(opskriftClone);
