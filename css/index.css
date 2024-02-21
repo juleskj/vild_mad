@@ -152,9 +152,43 @@ p {
 
 .grid-item:hover img {
   transform: scale(1.2);
-  transition: transform 0.3s;
+  transition: transform 0.8s;
 }
 
 .grid-item:active img {
   transform: scale(1.2);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .recipes {
+    font-size: 0.8rem;
+  }
+
+  .text-wrapper {
+    text-align: center;
+  }
+
+  .text-wrapper h2 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
