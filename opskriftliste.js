@@ -9,14 +9,7 @@ function init() {
   opskriftContainer = document.querySelector(".opskrift_container");
 
   /*********************************** henter data fra supabase og laver data om til json **************************************/
-<<<<<<< HEAD
-  fetch("https://hkacgwvfknbydsffczoz.supabase.co/rest/v1/vild_mad_opskrifter", {
-    method: "GET",
-    headers: {
-      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrYWNnd3Zma25ieWRzZmZjem96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4Mjc3MzMsImV4cCI6MjAyMzQwMzczM30.jv7QvuNAplwpeSdsg2PFEwkguugb0vnWAl7AASiXX4E",
-    },
-  })
-=======
+
   fetch(
     "https://hkacgwvfknbydsffczoz.supabase.co/rest/v1/vild_mad_opskrifter",
     {
@@ -28,7 +21,6 @@ function init() {
       },
     }
   )
->>>>>>> a73df727f92fa12bb80d0d34ce7212a474a4eaea
     .then((res) => res.json())
     .then(showOpskrifter);
 }
@@ -43,13 +35,16 @@ function showOpskrifter(opskriftJSON) {
   opskriftJSON.forEach((opskrift) => {
     opskriftClone = opskriftTemplate.cloneNode(true).content;
 
-    opskriftClone.querySelector(".opskrift_overskrift").textContent = opskrift.name;
+    opskriftClone.querySelector(".opskrift_overskrift").textContent =
+      opskrift.name;
 
-    opskriftClone.querySelector(".cookingtime").textContent = opskrift.cookingtime;
+    opskriftClone.querySelector(".cookingtime").textContent =
+      opskrift.cookingtime;
 
     opskriftClone.querySelector(".portion").textContent = opskrift.portionsize;
 
-    opskriftClone.querySelector(".difficulty").textContent = opskrift.difficulty;
+    opskriftClone.querySelector(".difficulty").textContent =
+      opskrift.difficulty;
 
     opskriftClone.querySelector(".month").textContent = opskrift.month;
     opskriftClone.querySelector(".recepie_image").src = opskrift.img;
@@ -66,11 +61,9 @@ function showOpskrifter(opskriftJSON) {
     }
 
     /*********************************** produkt single view **************************************/
-<<<<<<< HEAD
-    //her bliver ancho sendt videre med et id
-=======
+
     //her bliver ancho sendt videre med et id til singleviewet
->>>>>>> a73df727f92fa12bb80d0d34ce7212a474a4eaea
+
     opskriftClone.querySelector("a").href = `singleview.html?id=${opskrift.id}`;
 
     /*********************************** cloner **************************************/
