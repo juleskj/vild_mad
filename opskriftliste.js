@@ -47,8 +47,10 @@ function showOpskrifter(opskriftJSON) {
 
     opskriftClone.querySelector(".month").textContent = opskrift.month;
     opskriftClone.querySelector(".recepie_image").src = opskrift.img;
+    opskriftClone.querySelector(".recepie_image").alt = opskrift.name;
 
-    // her tjekker jeg i daten og det ekelte opskrift om "herbs" er falske, for hvis den er skal den fjenre urte iconet
+    // her tjekker jeg i daten og det ekelte opskrift om "herbs" er falske, for hvis den er skal
+    //den fjenre urte iconet
     if (opskrift.herbs == false) {
       opskriftClone.querySelector(".herbs").classList.add("none");
     }
