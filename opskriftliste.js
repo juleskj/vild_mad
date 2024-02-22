@@ -9,6 +9,7 @@ function init() {
   opskriftContainer = document.querySelector(".opskrift_container");
 
   /*********************************** henter data fra supabase og laver data om til json **************************************/
+
   fetch(
     "https://hkacgwvfknbydsffczoz.supabase.co/rest/v1/vild_mad_opskrifter",
     {
@@ -60,7 +61,9 @@ function showOpskrifter(opskriftJSON) {
     }
 
     /*********************************** produkt single view **************************************/
+
     //her bliver ancho sendt videre med et id til singleviewet
+
     opskriftClone.querySelector("a").href = `singleview.html?id=${opskrift.id}`;
 
     /*********************************** cloner **************************************/

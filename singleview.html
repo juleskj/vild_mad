@@ -1,3 +1,122 @@
+<template>
+
+    <div class="food-img"><img src="singleview-img/pasta_seaweed&herbs.webp" alt="Pasta with Seaweed & Herbs">
+    </div>
+    <div class="title">
+        <img src="singleview-img/star.webp" alt="star">
+        <h1>PASTA WITH SEAWEED & HERBS</h1><img src="singleview-img/star.webp" alt="star">
+    </div>
+    <div class="recipe">
+        <div class="recipe-info">
+            <div class="row1">
+                <div class="ingredients">
+
+                    <h2>Ingredients</h2>
+                    <label class="ingredient-list">
+                        <input type="checkbox">300g spaghetti
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="ingredient-list">
+                        <input type="checkbox">100g seaweed
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="ingredient-list">
+                        <input type="checkbox">
+                        2 tablespoons olive oil
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="ingredient-list">
+                        <input type="checkbox">
+                        2 tablespoons butter
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="ingredient-list">
+                        <input type="checkbox">
+                        1 clove of garlic
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="ingredient-list">
+                        <input type="checkbox">
+                        100g wild herbs, including ramson, sweet cicely, watercress, marsh
+                        samphire.
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="ingredient-list">
+                        <input type="checkbox">
+                        A pinch of salt
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="ingredient-list">
+                        <input type="checkbox">
+                        A pinch of black pepper
+                        <span class="checkmark"></span>
+                    </label>
+                    <br>
+                    <h3>What parts of the plant to use</h3>
+                    <p>The entire algae. If you are using bladderwrack, cut away the stems. The stems can add a
+                        strange
+                        slimy texture to the dish, which can be avoided this way.</p>
+                </div>
+                <div class="instructions">
+                    <h2>Instructions</h2>
+                    <ol>
+                        <li>Fill a large pot with water, add a small handful of salt, and bring it to the boil.
+                        </li>
+                        <li>Cook the spaghetti according to the instructions on the packaging</li>
+                        <li>While the pasta is cooking, cut the seaweed into strips roughly the same size as the
+                            pasta
+                        </li>
+                        <li>Chop the garlic finely.</li>
+                        <li>In another pot, heat oil and butter. Sauté the seaweed and garlic. They should
+                            become a
+                            bit
+                            transparent.</li>
+                        <li>When the pasta is done cooking, drain the pasta and add it to the pan with seaweed
+                            and
+                            garlic.</li>
+                        <li>Mix well with salt and pepper.</li>
+                        <li>Chop the herbs and sprinkle over the pasta.</li>
+                        <li>Serve immediately.</li>
+
+                    </ol>
+                </div>
+
+
+            </div>
+            <div class="row2">
+                <div class="author">
+                    <img src="singleview-img/david_profile.webp" alt="David de Silva">
+                    <h3>David de Silva</h3>
+                    <h4>Founder & CEO</h4>
+                </div>
+
+                <div class="info">
+                    <img src="billeder/difficulty.svg" alt="difficulty meter">
+                    <p>DIFFICULTY</p>
+                    <img src="billeder/postionsize.svg" alt="portion size">
+                    <p>PORTION SIZE</p>
+                    <img src="billeder/cooking_time.svg" alt="cooking time">
+                    <p>COOKING TIME</p>
+                </div>
+            </div>
+        </div>
+        <div class="tips-slide">
+            <p>TIP: This recipe is a good way to introduce seaweed into your kitchen. Seaweed can be used in
+                various
+                ways, and sautéing it before use makes it a bit more palatable for those who are sceptical. </p>
+        </div>
+        <div class="foraged">
+            <img src="singleview-img/bladderwrack.webp" alt="bladderwrack">
+            <img src="singleview-img/wrack.webp" alt="wrack">
+            <img src="singleview-img/oarweed.webp" alt="oarweed">
+        </div>
+    </div>
+</template>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,27 +124,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opskift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Preahvihear&family=Raleway&display=swap" rel="stylesheet">
+
+    <!------------- Fonte ------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Hind:wght@300;400;500;600;700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/singleview.css">
     <link rel="stylesheet" href="singleview.html">
 
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" href="billeder/favicon.svg">
 </head>
 
 <body>
 
     <header>
+        <div class="hamburger_menu">
+            <input id="menu_toggle" type="checkbox">
+            <label class="menu_knap" for="menu_toggle">
+                <span></span>
+            </label>
 
 
+            <ul>
+
+
+                <li><a href="categori.html">Category</a></li>
+                <li><a class="aktiv" href="opskriftliste.html">Recipes</a></li>
+                <li class="logo"><a href="index.html"><img src="css/logo.svg" alt="logo"></a></li>
+                <li><a href="singleview.html">Singleview</a></li>
+                <li><a href="form.html">Form</a></li>
+
+            </ul>
+
+
+        </div>
     </header>
 
     <main>
-        <h1>VILD MAD</h1>
+
+
+
+        <div id="recipe_list">
+
+
+            <div class="recipe_container">
+            </div>
+
+
+            <template class="recipe_template">
+
+                <article class="product">
+
+                    <img src="singleview-img/pasta_seaweed&herbs.webp" alt="pasta seaweed & herbs" class="recipe_image">
+
+                    <div class="col">
+                        <h2 class="recipe_title">Pasta with Seaweed & Herbs</h2>
+                        <div class="category_ingredient">
+                            <img src="billeder/mushrooms.svg" alt="mushroom icon" class="mushroom">
+                            <img src="billeder/herbs.svg" alt="herbs icon" class="herbs">
+                        </div>
+                        <div class="col2">
+
+                            <div class="info_list">
+                                <div class="cookingtime_div"><img src="billeder/cooking_time.svg"
+                                        alt="at pot to show the cooking time">
+                                    <p class="cookingtime">Minutes</p>
+                                </div>
+                                <div class="portion_div">
+                                    <img src="billeder/postionsize.svg" alt="the portion size for the dish">
+                                    <p class="portion">prs</p>
+
+                                </div>
+                                <div class="difficulty_div">
+                                    <img src="billeder/difficulty.svg" alt="stars">
+                                    <p class="difficulty">easy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col3">
+                            <h2>Instructions</h2>
+                            <div class="instructions">
+                                <ol>
+                                    <li>Heat the oil on a pan at medium heat.</li>
+                                    <li>Toast the bread in 2 tbsp oil, until it is
+                                        golden on both sides.</li>
+                                    <li>Add butter to the pan and let the bread sauté. It should be golden brown
+                                        and crispy.</li>
+                                    <li>Sprinkle the bread with a bit of salt.</li>
+                                    <li>Cut the mushrooms into bite-size pieces. They should easily rest on top of the
+                                        toast.</li>
+                                    <li> Heat remaining 2 tbsp oil in pan and sauté the mushrooms.</li>
+                                    <li> Add salt and pepper, adjusting to taste throughout the cooking</li>
+                                    <li>Chop the wild herbs and add them to the mushrooms, warming through.</li>
+                                    <li>Plate the toast and top with warm mushrooms. Serve immediately.</li>
+
+
+
+
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </template>
+        </div>
+        <div class="col4">
+            <div class="ingredients">
+
+                <h2>Ingredients</h2>
+                <label class="ingredient-list">
+                    <input type="checkbox">300g spaghetti
+                    <span class="checkmark"></span>
+                </label>
+                <label class="ingredient-list">
+                    <input type="checkbox">100g seaweed
+                    <span class="checkmark"></span>
+                </label>
+                <label class="ingredient-list">
+                    <input type="checkbox">
+                    2 tablespoons olive oil
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="ingredient-list">
+                    <input type="checkbox">
+                    2 tablespoons butter
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="ingredient-list">
+                    <input type="checkbox">
+                    1 clove of garlic
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="ingredient-list">
+                    <input type="checkbox">
+                    100g wild herbs, including ramson, sweet cicely, watercress, marsh
+                    samphire.
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="ingredient-list">
+                    <input type="checkbox">
+                    A pinch of salt
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="ingredient-list">
+                    <input type="checkbox">
+                    A pinch of black pepper
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="row2">
+                <div class="author">
+                    <img src="singleview-img/david_profile.webp" alt="David de Silva">
+                    <h3>David de Silva</h3>
+                    <h4>Founder & CEO</h4>
+                </div>
+
+            </div>
+        </div>
+        <div class="tips-slide">
+            <p>TIP: This recipe is a good way to introduce seaweed into your kitchen. Seaweed can be used in
+                various
+                ways, and sautéing it before use makes it a bit more palatable for those who are sceptical. </p>
+        </div>
+        <div class="foraged">
+            <img src="singleview-img/bladderwrack.webp" alt="bladderwrack">
+            <img src="singleview-img/wrack.webp" alt="wrack">
+            <img src="singleview-img/oarweed.webp" alt="oarweed">
+        </div>
+
 
     </main>
 
     <footer>
 
+        <section id="footerGrid">
+            <div>
+                <div id="formContainer">
+                    <h3 id="formHeading">Show us your forage finds!</h3>
+                    <form>
+                        <div class="formGroup">
+                            <input class="footerInput" type="text" placeholder="Your name" name="firstName">
+                        </div>
+                        <div class="formGroup">
+                            <input class="footerInput" type="email" placeholder="Your email" name="email">
+                        </div>
+                        <div class="formGroup">
+                            <input class="footerInput" type="text" placeholder="Your school" name="firstName">
+                        </div>
+                        <div class="formGroup">
+                            <div>
+                                <input id="formImg" type="file" name="yield">
+                            </div>
+                        </div>
+                        <input class="footerInput" id="submit" type="submit" value="Send in">
+                </div>
+                </form>
+            </div>
+            </div>
+            <div><a href="index.html"><img id="footerLogo" src="css/logo.svg" alt="logo for hjemmesiden"></a></div>
+            <div><a href="https://vildmad.dk/dk"><img id="footerVmLogo" src="/img/vildmadlogo.webp"
+                        alt="vildmad logo"></a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/vildmaddk"><img class="footerIcon" src="img/fbLogo.png"
+                        alt="facebook logo"></a>
+                <a href="https://www.instagram.com/vildmaddk/"><img class="footerIcon" src="/img/igLogo.png"
+                        alt="instagram logo "></a>
+            </div>
 
+        </section>
     </footer>
 
 
