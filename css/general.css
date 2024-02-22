@@ -16,7 +16,7 @@ body {
 
 footer {
   background-color: var(--brown);
- 
+  margin-top: auto;
 }
 
 p,
@@ -168,7 +168,6 @@ li :hover {
   border-bottom: solid yellow 2px;
 }
 
-
 /******************** footer ********************/
 
 #footerGrid {
@@ -189,7 +188,6 @@ li :hover {
   margin-top: 15%;
   margin-left: 20%;
   margin-bottom: 15%;
-
 }
 
 #footerVmLogo {
@@ -212,7 +210,7 @@ li :hover {
   margin-right: 15%;
 }
 .formGroup {
- padding-bottom: 5%;
+  padding-bottom: 5%;
 }
 
 .footerInput {
@@ -226,6 +224,6 @@ li :hover {
 }
 
 #submit {
-  width: 50%;  
+  width: 50%;
   margin-left: 25%;
 }
